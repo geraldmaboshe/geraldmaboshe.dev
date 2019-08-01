@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 class Header extends Component {
 
     render() {
         return (
+            <Router>
             <div style={styling}>
                 <div style={navigation}>
                     <Link style={Link1} to="/">🖥 Gerald Maboshe</Link> 
@@ -21,21 +23,33 @@ class Header extends Component {
                     </p>
                 </div>
                 <div style={followBtns}>
-                    <button style={btns}> 
+                    <button style={btns} onClick={()=> {
+                        //same tab
+                       //window.location.href="https://github.com/geraldMaboshe"
+                       
+                       //new tab
+                       window.open("https://github.com/geraldMaboshe","_blank")
+ 
+                    }}> 
                         <img src="github.png" width="20px"/>
                         Follow
                     </button>
-                    <button style={btns}> 
+                    <button style={btns} onClick={() => {
+                        window.open('https://www.linkedin.com/in/gerald-maboshe-339846164/','_blank')
+                    }}> 
                         <img src="linked.png" width="20px"/>
                         Connect
                     </button>
-                    <button style={btns}> 
+                    <button style={btns} onClick={() => {
+                        window.open('https://twitter.com/gerald_maboshe', '_blank')
+                    }}> 
                         <img src="twitter.png" width="20px"/>
                         Follow
                     </button>
                 </div>
             
             </div>
+            </Router>
         );
     }
 }
