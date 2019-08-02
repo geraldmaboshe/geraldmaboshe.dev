@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+//import {BrowserRouter as Router, Route} from 'react-router-dom';
 class Header extends Component {
 
     render() {
         return (
-            <Router>
+            // <Router>
             <div style={styling}>
                 <div style={navigation}>
                     <Link style={Link1} to="/">🖥 Gerald Maboshe</Link> 
-                    <div style={divLink}>
+                    <a style={divLink} href="#form">Subscribe/Contact</a> 
+                
+                    {/* <div style={divLink}>
                         <Link style={otherLinks}  to="articles">Articles</Link> | <Link style={otherLinks} to="events">Events</Link>
-                    </div>
+                        <
+                    </div> */}
                 </div>
                 <div style={main}>
                     <h1>Hey, I'm Gerald 😊
                     <img style={imgStyle} src="pic.jpg"/>
                     </h1>
                         <p>
-                        I'm a modern JavaScript developer and a data science enthusiast <br />
-                        I love building web apps and everything tech
+                        I'm a modern JavaScript developer, a data science enthusiast<br /> and an aspiring tech writer <br />
+                        I love building web apps and everything tech. I have been <br />coding for more than 2 years 
+                        and I love contributing to open source.<br /><br />
+                        If you like what I do, subcribe to my website in the form below to receive<br />
+                        notifications about my publications.<br /><br />
+                        Give me feedback about my work in the contact form below
+
+                        
                     </p>
                 </div>
                 <div style={followBtns}>
@@ -47,9 +56,26 @@ class Header extends Component {
                         Follow
                     </button>
                 </div>
+                <div style = {formStyle} id="form"> 
+                    <form >
+                        <div>
+                            <h2>Subscribe</h2>
+                            <input style ={subField} type="text" placeholder="Enter your email"></input><br />
+                            <input type="button" value = "Subscribe" style={subBtn}></input><br />
+                        </div> 
+                        <div >
+                            <h2>Contact me</h2>
+                            <input style={contactField} type="text" placeholder="Enter your name" /><br />
+                            <input style={contactField} type="text" placeholder="Enter your email" /><br />
+                            <input style={contactField} type="text" placeholder="subject" /><br />
+                            <textarea style={contactField} name="message" placeholder="Your message" /><br />
+                            <input style = {contactBtn} type="button" value="Send" /><br />
+                        </div>
+                    </form>
+                </div>
             
             </div>
-            </Router>
+            //</Router>
         );
     }
 }
@@ -61,14 +87,14 @@ const styling = {
 const main = {
     marginTop: "150px",
     marginLeft: "150px",
-    marginRight: "150px",
+    marginRight: "150px"
     
     
 }
 const imgStyle = {
     float: "right",
     borderRadius: "50%",
-    width: '200px', 
+    width: '200px' 
 }
 
 const Link1 = {
@@ -90,6 +116,7 @@ const Link1 = {
  const followBtns = {
      marginLeft:"150px",
      paddingTop:"40px",
+     marginBottom: "50px"
     
  }  
  const btns = {
@@ -98,4 +125,41 @@ const Link1 = {
     margin: "4px 2px",
     borderRadius:"2px"
  }
+ const formStyle ={
+    textAlign:"center",
+    paddingTop:"40px",
+ }
+ const subField = {
+     padding: "10px",
+     width: "60%",
+     borderRadius: "5px",
+     margin: '10px',
+     //borderStyle: 'solid'
+ }
+ const subBtn = {
+     padding: '5px',
+     marginTop: '10px',
+     marginBottom: '30px',
+     borderRadius: "5px",
+     width: '10%'
+     
+ }
+ const contactField = {
+    padding: "10px",
+    width: "60%",
+    borderRadius: "5px",
+    margin: '10px',
+    //borderStyle: 'solid'
+    
+
+ }
+ const contactBtn = {
+    padding: '5px',
+    marginTop: '5px',
+    borderRadius: "5px",
+    marginBottom: '120px',
+    width: '10%'
+    
+ }
+ 
 export default Header;
