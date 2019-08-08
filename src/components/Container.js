@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-//import {BrowserRouter as Router, Route} from 'react-router-dom';
 class Header extends Component {
 
     render() {
         return (
-            // <Router>
-            <div style={styling}>
+            <div>
                 <div style={navigation}>
-                    <Link style={Link1} to="/">🖥 Gerald Maboshe</Link> 
-                    <a style={divLink} href="#form">Subscribe/Contact</a> 
+                    <h1 style={{marginLeft: '150px'}}>🖥 Gerald Maboshe</h1>
+                     <a style={divLink1} href="#articles">Articles  |   </a> 
+                     <a style={divLink2} > Subscribe/Contact</a>  
                 
-                    {/* <div style={divLink}>
-                        <Link style={otherLinks}  to="articles">Articles</Link> | <Link style={otherLinks} to="events">Events</Link>
-                        <
-                    </div> */}
+                 
                 </div>
                 <div style={main}>
-                    <h1>Hey, I'm Gerald 😊
+                    <h1>Hey, I'm Gerald <span>😊</span>
                     <img style={imgStyle} src="pic.jpg"/>
                     </h1>
                         <p>
                         I'm a modern JavaScript developer, a data science enthusiast<br /> and an aspiring tech writer <br />
-                        I love building web apps and everything tech. I have been <br />coding for more than 2 years 
+                        I love building web apps and everything tech. I have been <br />coding for about a dozen months 
                         and I love contributing to open source.<br /><br />
                         If you like what I do, subcribe to my website in the form below to receive<br />
                         notifications about my publications.<br /><br />
@@ -56,7 +51,19 @@ class Header extends Component {
                         Follow
                     </button>
                 </div>
-                <div style = {formStyle} id="form"> 
+                <div style={articleStyle} id="articles">
+                    <h2>Articles</h2>
+                    <a href="https://medium.com/bongohive/how-i-got-an-internship-position-at-a-zambian-tech-hub-bongohive-a2ad8cfdc002">
+                    How I Got an Internship Position at a Zambian Tech Hub (BongoHive) 
+                    </a>
+                </div>
+                <div style={footerStyle}>
+                    <p>&copy; 2019. Gerald Maboshe</p>
+                </div>
+               <div>
+                   
+               </div>
+                {/* <div style = {formStyle} id="form"> 
                     <form >
                         <div>
                             <h2>Subscribe</h2>
@@ -72,18 +79,14 @@ class Header extends Component {
                             <input style = {contactBtn} type="button" value="Send" /><br />
                         </div>
                     </form>
-                </div>
+                </div> */}
             
             </div>
-            //</Router>
+         
         );
     }
 }
-const styling = {
-    //backgroundColor: "#4682B4", 
-    //height: "500px"  
-    //float:"left"
-}
+
 const main = {
     marginTop: "150px",
     marginLeft: "150px",
@@ -102,12 +105,18 @@ const Link1 = {
     marginLeft: "40px",
     fontSize: "30px",
 }
- const divLink = {
-   float:'right'
+ const divLink1 = {
+    marginLeft: '75%',
+   textDecoration: "none"
  }
+ const divLink2 = {
+   
+    textDecoration: "none",
+    color: 'grey'
+  }
  const otherLinks = {
-    textDecoration:"none"
- }
+   textDecoration:"none"
+  }
  const navigation = {
     marginTop:'40px',
     marginRight:'40px'
@@ -116,7 +125,7 @@ const Link1 = {
  const followBtns = {
      marginLeft:"150px",
      paddingTop:"40px",
-     marginBottom: "50px"
+     marginBottom: "100px"
     
  }  
  const btns = {
@@ -134,7 +143,7 @@ const Link1 = {
      width: "60%",
      borderRadius: "5px",
      margin: '10px',
-     //borderStyle: 'solid'
+     
  }
  const subBtn = {
      padding: '5px',
@@ -149,7 +158,7 @@ const Link1 = {
     width: "60%",
     borderRadius: "5px",
     margin: '10px',
-    //borderStyle: 'solid'
+
     
 
  }
@@ -160,6 +169,15 @@ const Link1 = {
     marginBottom: '120px',
     width: '10%'
     
+ }
+ const articleStyle = {
+     marginBottom: '400px',
+     marginLeft: '150px',
+     marginTop: '20px'
+ }
+ const footerStyle ={
+        marginLeft: '150px',
+        marginBottom: '100px'
  }
  
 export default Header;
