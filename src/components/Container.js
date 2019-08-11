@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'reactstrap';
+
 class Header extends Component {
 
     render() {
         return (
-            <div>
+            <Container expand="sm">
+            <div style={{margin: '30px 150px'}}>
                 <div style={navigation}>
-                    <h1 style={{marginLeft: '150px'}}>🖥 Gerald Maboshe</h1>
-                     <a style={divLink1} href="#articles">Articles  |   </a> 
-                     <a style={divLink2} > Subscribe/Contact</a>  
-                
-                 
+                    <a>🖥 Gerald Maboshe</a>
+                    <a style={divLink1} href="#articles">Articles</a> 
+                     {/* <a style={divLink2} > Subscribe/Contact</a>   */}
                 </div>
-                <div style={main}>
+                <div style={{marginTop:'150px'}}>
                     <h1>Hey, I'm Gerald <span>😊</span>
                     <img style={imgStyle} src="pic.jpg"/>
                     </h1>
-                        <p>
-                        I'm a modern JavaScript developer, a data science enthusiast<br /> and an aspiring tech writer <br />
-                        I love building web apps and everything tech. I have been <br />coding for about a dozen months 
-                        and I love contributing to open source.<br /><br />
-                        If you like what I do, subcribe to my website in the form below to receive<br />
+                    <p>
+                        I'm a modern JavaScript developer, Data Science enthusiast<br /> and aspiring tech writer <br />
+                        I love building web apps and have been <br />coding for over 2 years.
+                        I like contributing to open source.<br /><br />
+                        {/* If you like what I do, subcribe to my website in the form below to receive<br />
                         notifications about my publications.<br /><br />
-                        Give me feedback about my work in the contact form below
+                        Give me feedback about my work in the contact form below */}
 
                         
                     </p>
@@ -35,19 +37,19 @@ class Header extends Component {
                        window.open("https://github.com/geraldMaboshe","_blank")
  
                     }}> 
-                        <img src="github.png" width="20px"/>
+                        <img src="github.png" width="25px"/>
                         Follow
                     </button>
                     <button style={btns} onClick={() => {
                         window.open('https://www.linkedin.com/in/gerald-maboshe-339846164/','_blank')
                     }}> 
-                        <img src="linked.png" width="20px"/>
+                        <img src="linked.png" height="25px"/> 
                         Connect
                     </button>
                     <button style={btns} onClick={() => {
                         window.open('https://twitter.com/gerald_maboshe', '_blank')
                     }}> 
-                        <img src="twitter.png" width="20px"/>
+                        <img src="twitter.png" width="25px"/>
                         Follow
                     </button>
                 </div>
@@ -82,18 +84,13 @@ class Header extends Component {
                 </div> */}
             
             </div>
+            </Container>
          
         );
     }
 }
 
-const main = {
-    marginTop: "150px",
-    marginLeft: "150px",
-    marginRight: "150px"
-    
-    
-}
+
 const imgStyle = {
     float: "right",
     borderRadius: "50%",
@@ -106,31 +103,26 @@ const Link1 = {
     fontSize: "30px",
 }
  const divLink1 = {
-    marginLeft: '75%',
+    float:"right",
    textDecoration: "none"
  }
- const divLink2 = {
-   
-    textDecoration: "none",
-    color: 'grey'
-  }
+
  const otherLinks = {
    textDecoration:"none"
   }
  const navigation = {
-    marginTop:'40px',
-    marginRight:'40px'
+     display: 'inline block'
  }
 
  const followBtns = {
-     marginLeft:"150px",
      paddingTop:"40px",
      marginBottom: "100px"
+
     
  }  
  const btns = {
     textAlign: 'center',
-    width:"80px",
+    width:"90px",
     margin: "4px 2px",
     borderRadius:"2px"
  }
@@ -158,9 +150,6 @@ const Link1 = {
     width: "60%",
     borderRadius: "5px",
     margin: '10px',
-
-    
-
  }
  const contactBtn = {
     padding: '5px',
@@ -172,11 +161,9 @@ const Link1 = {
  }
  const articleStyle = {
      marginBottom: '400px',
-     marginLeft: '150px',
      marginTop: '20px'
  }
  const footerStyle ={
-        marginLeft: '150px',
         marginBottom: '100px'
  }
  
