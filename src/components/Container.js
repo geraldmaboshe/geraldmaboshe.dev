@@ -12,9 +12,8 @@ class Header extends Component {
                     <img style={imgStyle} src="pic.jpg"/>
                     </h1>
                     <p>
-                        I'm a modern JavaScript developer, Data Science enthusiast<br /> and aspiring tech writer <br />
-                        I love building web apps and have been <br />coding for over 2 years.
-                        I like contributing to open source.<br /><br />
+                        I'm a modern JavaScript developer, Data Science enthusiast<br /> and aspiring tech writer. 
+                        I love building<br /> web and mobile apps and have been coding for over  2 years.<br />
                         {/* If you like what I do, subcribe to my website in the form below to receive<br />
                         notifications about my publications.<br /><br />
                         Give me feedback about my work in the contact form below */}
@@ -156,7 +155,7 @@ const Link1 = {
  }
  const articleStyle = {
      marginBottom: '400px',
-     marginTop: '20px'
+     marginTop: '150px'
  }
  const footerStyle ={
         marginBottom: '100px'
