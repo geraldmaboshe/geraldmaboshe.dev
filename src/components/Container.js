@@ -6,13 +6,7 @@ class Header extends Component {
 
     render() {
         return (
-            <Container expand="sm">
-            <div style={{margin: '30px 150px'}}>
-                <div style={navigation}>
-                    <a>🖥 Gerald Maboshe</a>
-                    <a style={divLink1} href="#articles">Articles</a> 
-                     {/* <a style={divLink2} > Subscribe/Contact</a>   */}
-                </div>
+            <Container>
                 <div style={{marginTop:'150px'}}>
                     <h1>Hey, I'm Gerald <span>😊</span>
                     <img style={imgStyle} src="pic.jpg"/>
@@ -83,8 +77,8 @@ class Header extends Component {
                     </form>
                 </div> */}
             
-            </div>
             </Container>
+          
          
         );
     }
@@ -108,10 +102,11 @@ const Link1 = {
  }
 
  const otherLinks = {
-   textDecoration:"none"
+   textDecoration:"none",
   }
  const navigation = {
-     display: 'inline block'
+     display: 'inline block',
+     
  }
 
  const followBtns = {
