@@ -54,7 +54,7 @@ class Header extends Component {
                     </a>
                 </div>
                 <div style={footerStyle}>
-                    <p>&copy; 2019. Gerald Maboshe</p>
+                    <p>&copy; 2020. Gerald Maboshe</p>
                 </div>
                <div>
                    
