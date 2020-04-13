@@ -1,0 +1,24 @@
+@import 'config';
+.project-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: $primary-alignment;
+  margin-bottom: 5%;
+}
+.hr {
+  width: 1px;
+  height: 20px;
+  display: inline-block;
+}
+#projects {
+  text-align: $primary-alignment;
+}
+#articles {
+  text-align: $primary-alignment;
+}
+
+.article-content {
+  display: flex;
+  align-items: $primary-alignment;
+  margin-left: 8%;
+}

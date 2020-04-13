@@ -1,0 +1,36 @@
+.project-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+
+.hr {
+  width: 1px;
+  height: 20px;
+  display: inline-block;
+}
+
+#projects {
+  text-align: center;
+}
+
+#articles {
+  text-align: center;
+}
+
+.article-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 8%;
+}
+/*# sourceMappingURL=main.css.map */
