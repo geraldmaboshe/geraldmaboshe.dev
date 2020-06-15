@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Button } from 'reactstrap';
-import './../styles/main.css';
 
 class Header extends Component {
   render() {
@@ -10,7 +9,7 @@ class Header extends Component {
         <div style={{ marginTop: '150px' }}>
           <h1>
             Hey, I'm Gerald <span>😊</span>
-            <img style={imgStyle} src='pic.jpg' />
+            <img style={imgStyle} src="pic.jpg" />
           </h1>
           <p>
             I'm a modern JavaScript developer, Data Science enthusiast <br />{' '}
@@ -34,7 +33,7 @@ class Header extends Component {
               window.open('https://github.com/geraldMaboshe', '_blank');
             }}
           >
-            <img src='github.png' width='25px' />
+            <img src="github.png" width="25px" />
             Follow
           </button>
           <button
@@ -46,7 +45,7 @@ class Header extends Component {
               );
             }}
           >
-            <img src='linked.png' height='25px' />
+            <img src="linked.png" height="25px" />
             Connect
           </button>
           <button
@@ -55,42 +54,65 @@ class Header extends Component {
               window.open('https://twitter.com/gerald_maboshe', '_blank');
             }}
           >
-            <img src='twitter.png' width='25px' />
+            <img src="twitter.png" width="25px" />
             Follow
           </button>
         </div>
-        <h2 id='projects'>Projects</h2>
+        <h2 id="projects">Projects</h2>
         <hr />
-        <div className='project-content'>
-          <div className='project1'>
+        <div className="project-content">
+          <div className="project1">
             <h3>
-              <a href='https://github.com/geraldmaboshe/TilungisaAuto'>
+              <a href="https://github.com/geraldmaboshe/zibo-estates-fullstack">
+                Zibo Estates
+                <img src="github.png" width="30px" />
+              </a>
+            </h3>
+            <p>A real estate app</p>
+            <p>
+              <a href="https://zibo-estates-fullstack.herokuapp.com/">
+                https://zibo-estates-fullstack.herokuapp.com/
+              </a>
+            </p>
+            <Button color="secondary">React</Button>{' '}
+            <Button color="secondary">Express</Button>{' '}
+            <Button color="secondary">Node</Button> <br /> <br />
+            <Button color="secondary">MongoDB</Button>{' '}
+          </div>
+          <div className="project2">
+            <h3>
+              <a href="https://github.com/geraldmaboshe/TilungisaAuto">
                 Tilungisa Auto
-                <img src='github.png' width='30px' />
+                <img src="github.png" width="30px" />
               </a>
             </h3>
             <p>An auto mechanic booking mobile application</p>
-            <Button color='secondary'>React</Button>{' '}
-            <Button color='secondary'>MongoDB</Button>{' '}
+            <Button color="secondary">React Native</Button>{' '}
+            <Button color="secondary">Express</Button>{' '}
+            <Button color="secondary">Node</Button> <br /> <br />
+            <Button color="secondary">MongoDB</Button>{' '}
           </div>
-          <div className='project2'>
+          <br />
+          <div className="project3">
             <h3>
-              <a href='https://github.com/geraldmaboshe/Punzila'>
+              <a href="https://github.com/geraldmaboshe/Punzila">
                 Punzila
-                <img src='github.png' width='30px' />
+                <img src="github.png" width="30px" />
               </a>
             </h3>
             <p>An E-learning mobile application for secondary school pupils</p>
-            <Button color='secondary'>Java</Button>{' '}
-            <Button color='secondary'>Android Studio</Button>{' '}
+            <Button color="secondary">Java</Button>{' '}
+            <Button color="secondary">SQLite </Button>
+            <p></p>
+            <br /> <br />
           </div>
         </div>
         <br />
-        <h2 id='articles'>Articles</h2>
+        <h2 id="articles">Articles</h2>
         <hr />
-        <div className='article-content'>
+        <div className="article-content">
           <hr />
-          <a href='https://medium.com/bongohive/how-i-got-an-internship-position-at-a-zambian-tech-hub-bongohive-a2ad8cfdc002'>
+          <a href="https://medium.com/bongohive/how-i-got-an-internship-position-at-a-zambian-tech-hub-bongohive-a2ad8cfdc002">
             How I Got an Internship Position at a Zambian Tech Hub (BongoHive)
           </a>
         </div>
@@ -124,75 +146,75 @@ class Header extends Component {
 const imgStyle = {
   float: 'right',
   borderRadius: '50%',
-  width: '200px',
+  width: '200px'
 };
 
 const Link1 = {
   textDecoration: 'none',
   marginLeft: '40px',
-  fontSize: '30px',
+  fontSize: '30px'
 };
 const divLink1 = {
   float: 'right',
-  textDecoration: 'none',
+  textDecoration: 'none'
 };
 
 const otherLinks = {
-  textDecoration: 'none',
+  textDecoration: 'none'
 };
 const navigation = {
-  display: 'inline block',
+  display: 'inline block'
 };
 
 const followBtns = {
   paddingTop: '40px',
-  marginBottom: '150px',
+  marginBottom: '150px'
 };
 const btns = {
   textAlign: 'center',
   width: '90px',
   margin: '4px 2px',
-  borderRadius: '2px',
+  borderRadius: '2px'
 };
 const formStyle = {
   textAlign: 'center',
-  paddingTop: '40px',
+  paddingTop: '40px'
 };
 const subField = {
   padding: '10px',
   width: '60%',
   borderRadius: '5px',
-  margin: '10px',
+  margin: '10px'
 };
 const subBtn = {
   padding: '5px',
   marginTop: '10px',
   marginBottom: '30px',
   borderRadius: '5px',
-  width: '10%',
+  width: '10%'
 };
 const contactField = {
   padding: '10px',
   width: '60%',
   borderRadius: '5px',
-  margin: '10px',
+  margin: '10px'
 };
 const contactBtn = {
   padding: '5px',
   marginTop: '5px',
   borderRadius: '5px',
   marginBottom: '120px',
-  width: '10%',
+  width: '10%'
 };
 const articleStyle = {
   alignItems: 'center',
   marginBottom: '400px',
-  marginTop: '150px',
+  marginTop: '150px'
 };
 const footerStyle = {
   marginBottom: '100px',
   textAlign: 'center',
-  marginTop: '100px',
+  marginTop: '100px'
 };
 
 export default Header;
