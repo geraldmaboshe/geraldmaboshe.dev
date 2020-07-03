@@ -14,7 +14,7 @@ class Header extends Component {
           <p>
             I'm a modern JavaScript developer, Data Science enthusiast <br />{' '}
             and aspiring tech writer. I love building web and mobile apps and{' '}
-            <br /> have been coding for over 2 years. Follow and connect with{' '}
+            <br /> have been coding for over 3 years. Follow and connect with{' '}
             <br />
             me on the buttons below
             {/* If you like what I do, subcribe to my website in the form below to receive<br />
