@@ -68,11 +68,6 @@ class Header extends Component {
               </a>
             </h3>
             <p>A real estate app</p>
-            <p>
-              <a href="https://zibo-estates-fullstack.herokuapp.com/">
-                https://zibo-estates-fullstack.herokuapp.com/
-              </a>
-            </p>
             <Button color="secondary">React</Button>{' '}
             <Button color="secondary">Express</Button>{' '}
             <Button color="secondary">Node</Button> <br /> <br />
