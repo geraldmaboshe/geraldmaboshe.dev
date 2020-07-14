@@ -7,32 +7,29 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Container,
+  Container
 } from 'reactstrap';
 
 class AppNavBar extends Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   toggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen,
+      isOpen: !this.state.isOpen
     });
   };
   render() {
     return (
-      <Navbar color='dark' dark expand='sm' className='mb-5'>
+      <Navbar color="dark" dark expand="sm" className="mb-5">
         <Container>
-          <NavbarBrand href='/'>Gerald Maboshe</NavbarBrand>
+          <NavbarBrand href="/">Gerald Maboshe</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className='ml-auto' navbar>
+            <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href='#projects'>Projects</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#articles'>Articles</NavLink>
+                <NavLink href="#projects">Projects</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

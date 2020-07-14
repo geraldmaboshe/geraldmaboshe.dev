@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Button } from 'reactstrap';
+import { Container, Button, NavLink } from 'reactstrap';
 
 class Header extends Component {
   render() {
@@ -8,54 +8,32 @@ class Header extends Component {
       <Container>
         <div style={{ marginTop: '150px' }}>
           <h1>
-            Hey, I'm Gerald <span>😊</span>
+            Hey, I'm Gerald{' '}
+            <span role="img" aria-label="Smiley emoji">
+              😊
+            </span>
           </h1>
           <p>
             I'm a Software Engineer, Data Science enthusiast and aspiring tech
             writer. I love learning new technologies. I <br /> have been coding
-            for over 3 years. Follow and connect with <br />
-            me on the buttons below
-            {/* If you like what I do, subcribe to my website in the form below to receive<br />
-                        notifications about my publications.<br /><br />
-                        Give me feedback about my work in the contact form below */}
+            for over 3 years. <br />
           </p>
         </div>
         <div style={followBtns}>
-          <button
-            style={btns}
-            onClick={() => {
-              //same tab
-              //window.location.href="https://github.com/geraldMaboshe"
-
-              //new tab
-              window.open('https://github.com/geraldMaboshe', '_blank');
-            }}
-          >
-            <img src="github.png" width="25px" />
-            Follow
-          </button>
-          <button
-            style={btns}
-            onClick={() => {
-              window.open(
-                'https://www.linkedin.com/in/gerald-maboshe-339846164/',
-                '_blank'
-              );
-            }}
-          >
-            <img src="linked.png" height="25px" />
-            Connect
-          </button>
-          <button
-            style={btns}
-            onClick={() => {
-              window.open('https://twitter.com/gerald_maboshe', '_blank');
-            }}
-          >
-            <img src="twitter.png" width="25px" />
-            Follow
-          </button>
+          <NavLink href="https://github.com/geraldmaboshe">
+            <img src="github.png" width="50px" alt="github" />
+          </NavLink>
+          <NavLink href="https://www.linkedin.com/in/geraldmaboshe/">
+            <img src="linked.png" height="50px" alt="LinkedIn" />
+          </NavLink>
+          <NavLink href="https://twitter.com/geraldmaboshe">
+            <img src="twitter.png" width="50px" alt="Twitter" />
+          </NavLink>
         </div>
+        <div style={email}>
+          <span>Email: maboshegerald1@gmail.com</span>
+        </div>
+
         <h2 id="projects">Projects</h2>
         <hr />
         <div className="project-content">
@@ -63,7 +41,7 @@ class Header extends Component {
             <h3>
               <a href="https://github.com/geraldmaboshe/zibo-estates-fullstack">
                 Zibo Estates
-                <img src="github.png" width="30px" />
+                <img src="github.png" width="30px" alt="github" />
               </a>
             </h3>
             <p>A real estate app</p>
@@ -76,7 +54,7 @@ class Header extends Component {
             <h3>
               <a href="https://github.com/geraldmaboshe/TilungisaAuto">
                 Tilungisa Auto
-                <img src="github.png" width="30px" />
+                <img src="github.png" width="30px" alt="github" />
               </a>
             </h3>
             <p>An auto mechanic booking mobile application</p>
@@ -90,7 +68,7 @@ class Header extends Component {
             <h3>
               <a href="https://github.com/geraldmaboshe/Punzila">
                 Punzila
-                <img src="github.png" width="30px" />
+                <img src="github.png" width="30px" alt="github" />
               </a>
             </h3>
             <p>An E-learning mobile application for secondary school pupils</p>
@@ -101,108 +79,22 @@ class Header extends Component {
           </div>
         </div>
         <br />
-        <h2 id="articles">Articles</h2>
-        <hr />
-        <div className="article-content">
-          <hr />
-          <a href="https://medium.com/bongohive/how-i-got-an-internship-position-at-a-zambian-tech-hub-bongohive-a2ad8cfdc002">
-            How I Got an Internship Position at a Zambian Tech Hub (BongoHive)
-          </a>
-        </div>
         <div style={footerStyle}>
           <br></br>
           <p>&copy; 2020. Gerald Maboshe</p>
         </div>
         <div></div>
-        {/* <div style = {formStyle} id="form"> 
-                    <form >
-                        <div>
-                            <h2>Subscribe</h2>
-                            <input style ={subField} type="text" placeholder="Enter your email"></input><br />
-                            <input type="button" value = "Subscribe" style={subBtn}></input><br />
-                        </div> 
-                        <div >
-                            <h2>Contact me</h2>
-                            <input style={contactField} type="text" placeholder="Enter your name" /><br />
-                            <input style={contactField} type="text" placeholder="Enter your email" /><br />
-                            <input style={contactField} type="text" placeholder="subject" /><br />
-                            <textarea style={contactField} name="message" placeholder="Your message" /><br />
-                            <input style = {contactBtn} type="button" value="Send" /><br />
-                        </div>
-                    </form>
-                </div> */}
       </Container>
     );
   }
 }
 
-const imgStyle = {
-  float: 'right',
-  borderRadius: '50%',
-  width: '200px'
-};
-
-const Link1 = {
-  textDecoration: 'none',
-  marginLeft: '40px',
-  fontSize: '30px'
-};
-const divLink1 = {
-  float: 'right',
-  textDecoration: 'none'
-};
-
-const otherLinks = {
-  textDecoration: 'none'
-};
-const navigation = {
-  display: 'inline block'
-};
-
 const followBtns = {
   paddingTop: '40px',
+  display: 'flex'
+};
+const email = {
   marginBottom: '150px'
-};
-const btns = {
-  textAlign: 'center',
-  width: '90px',
-  margin: '4px 2px',
-  borderRadius: '2px'
-};
-const formStyle = {
-  textAlign: 'center',
-  paddingTop: '40px'
-};
-const subField = {
-  padding: '10px',
-  width: '60%',
-  borderRadius: '5px',
-  margin: '10px'
-};
-const subBtn = {
-  padding: '5px',
-  marginTop: '10px',
-  marginBottom: '30px',
-  borderRadius: '5px',
-  width: '10%'
-};
-const contactField = {
-  padding: '10px',
-  width: '60%',
-  borderRadius: '5px',
-  margin: '10px'
-};
-const contactBtn = {
-  padding: '5px',
-  marginTop: '5px',
-  borderRadius: '5px',
-  marginBottom: '120px',
-  width: '10%'
-};
-const articleStyle = {
-  alignItems: 'center',
-  marginBottom: '400px',
-  marginTop: '150px'
 };
 const footerStyle = {
   marginBottom: '100px',
