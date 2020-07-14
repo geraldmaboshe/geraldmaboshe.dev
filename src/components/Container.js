@@ -9,12 +9,11 @@ class Header extends Component {
         <div style={{ marginTop: '150px' }}>
           <h1>
             Hey, I'm Gerald <span>😊</span>
-            <img style={imgStyle} src="pic.jpg" />
           </h1>
           <p>
-            I'm a Software Engineer, Data Science enthusiast <br /> and aspiring
-            tech writer. I love building web and mobile apps and <br /> have
-            been coding for over 3 years. Follow and connect with <br />
+            I'm a Software Engineer, Data Science enthusiast and aspiring tech
+            writer. I love learning new technologies. I <br /> have been coding
+            for over 3 years. Follow and connect with <br />
             me on the buttons below
             {/* If you like what I do, subcribe to my website in the form below to receive<br />
                         notifications about my publications.<br /><br />
