@@ -13,11 +13,13 @@ class Header extends Component {
               😊
             </span>
           </h1>
+          <br />
           <p>
             I'm a Software Engineer, Data Science enthusiast and aspiring tech
-            writer. I love learning new technologies <br /> have been coding for
-            over 3 years. <br />
+            writer. I love learning new technologies <br /> and have been coding
+            for over 3 years. <br />
           </p>
+          <br />
         </div>
         <div style={followBtns}>
           <NavLink href="https://github.com/geraldmaboshe">
