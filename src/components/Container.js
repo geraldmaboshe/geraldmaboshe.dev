@@ -15,8 +15,8 @@ class Header extends Component {
           </h1>
           <p>
             I'm a Software Engineer, Data Science enthusiast and aspiring tech
-            writer. I love learning new technologies. I <br /> have been coding
-            for over 3 years. <br />
+            writer. I love learning new technologies <br /> have been coding for
+            over 3 years. <br />
           </p>
         </div>
         <div style={followBtns}>
