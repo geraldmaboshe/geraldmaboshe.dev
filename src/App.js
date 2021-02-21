@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
-import Container from './components/Container';
-import AppNavBar from './components/AppNavBar';
+import React from 'react';
+import Section from './components/section/Section';
+import AppNavBar from './components/navbar/AppNavBar';
 import './App.css';
 import './styles/main.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <AppNavBar />
-        <Container />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <AppNavBar />
+      <Section />
+    </div>
+  );
 }
 
 export default App;

@@ -1,8 +1,7 @@
-@import 'config';
 .project-content {
   display: flex;
   justify-content: space-around;
-  align-items: $primary-alignment;
+  align-items: center;
   margin-bottom: 5%;
 }
 .hr {
@@ -10,16 +9,9 @@
   height: 20px;
   display: inline-block;
 }
-#projects {
-  text-align: $primary-alignment;
-}
-#articles {
-  text-align: $primary-alignment;
-}
-
 .article-content {
   display: flex;
-  align-items: $primary-alignment;
+  align-items: center;
   margin-left: 8%;
 }
 .project1 {
