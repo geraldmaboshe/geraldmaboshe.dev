@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 function Footer() {
   const date = new Date();
@@ -12,13 +13,9 @@ function Footer() {
     'Saturday'
   ];
   return (
-    <div>
-      <div className="footer">
-        <br></br>
-        <p>Happy {weekDays[date.getDay()]}</p>
-        <p>&copy; {date.getFullYear()}. Gerald Maboshe</p>
-      </div>
-      <div></div>
+    <div className="footer-container">
+      <p>Happy {weekDays[date.getDay()]}!</p>
+      <p>&copy; {date.getFullYear()}. Gerald Maboshe</p>
     </div>
   );
 }

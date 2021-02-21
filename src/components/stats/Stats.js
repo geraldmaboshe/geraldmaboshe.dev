@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Spinner } from 'reactstrap';
 import './index.scss';
 
 function Stats() {
@@ -20,20 +20,37 @@ function Stats() {
     fetchData();
   }, []);
   return (
-    <>
-      <p className="stats">Stats</p>
+    <div className="stats-container">
+      <p id="stats">Stats</p>
       <Row>
         <Col xs="12" md="4">
-          <p>GitHub Repos: {githubData.public_repos}</p>
+          <div className="stat-item">
+            <p>GitHub Repos</p>
+            <p className="stat-data">
+              {!loading ? (
+                githubData.public_repos
+              ) : (
+                <Spinner color="secondary" />
+              )}
+            </p>
+          </div>
         </Col>
         <Col xs="12" md="4">
-          <p>GitHub Followers: {githubData.followers}</p>
+          <div className="stat-item">
+            <p>GitHub Followers</p>
+            <p className="stat-data">
+              {!loading ? githubData.followers : <Spinner color="secondary" />}
+            </p>
+          </div>
         </Col>
         <Col xs="12" md="4">
-          <p>Developer Since: 2018</p>
+          <div className="stat-item">
+            <p>Developer Since</p>
+            <p className="stat-data">2018</p>
+          </div>
         </Col>
       </Row>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -10,38 +10,38 @@ import {
   Container
 } from 'reactstrap';
 
-class AppNavBar extends Component {
-  state = {
-    isOpen: false
-  };
+function AppNavBar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  toggle = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+  const toggle = () => {
+    setIsOpen(!isOpen);
   };
-  render() {
-    return (
-      <Navbar color="dark" dark expand="sm" className="mb-5">
-        <Container>
-          <NavbarBrand href="/">Gerald Maboshe</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#articles">Articles</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#projects">Projects</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#stats">Stats</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
-    );
-  }
+  return (
+    <Navbar color="dark" dark expand="sm" className="mb-5" fixed="top">
+      <Container>
+        <NavbarBrand href="/">Gerald Maboshe</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="#articles" onClick={toggle}>
+                Articles
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#projects" onClick={toggle}>
+                Projects
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#stats" onClick={toggle}>
+                Stats
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 export default AppNavBar;
