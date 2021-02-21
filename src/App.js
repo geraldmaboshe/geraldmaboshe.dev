@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
-import Container from './components/Container';
-import AppNavBar from './components/AppNavBar';
+import React from 'react';
+import Section from './components/section/Section';
+import AppNavBar from './components/navbar/AppNavBar';
 import './App.css';
-import './styles/main.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'reactstrap/lib/Container';
+import Footer from './components/footer/Footer';
+import Projects from './components/projects/Projects';
+import Articles from './components/articles/Articles';
+import Stats from './components/stats/Stats';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <AppNavBar />
-        <Container />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <AppNavBar />
+      <Container>
+        <Section />
+        <Articles />
+        <Projects />
+        <Stats />
+      </Container>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
